@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SuperLakes.com — Premium Domain For Sale</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink: #0d1a14;
+    --mist: #e8efe9;
+    --sage: #4a6b52;
+    --gold: #b8975a;
+    --water: #1a3a4a;
+    --cream: #f7f3ec;
+    --pale: #d4e2d5;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--water);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 120% 80% at 50% 110%, #0d2a38 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 20% 60%, #0a1f2e 0%, transparent 50%),
+      radial-gradient(ellipse 60% 40% at 80% 30%, #1a4a5a 0%, transparent 50%),
+      linear-gradient(180deg, #0a1520 0%, #1a3a4a 40%, #0d2230 100%);
+  }
+
+  .ripple {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(184, 151, 90, 0.12);
+    animation: ripple 8s ease-out infinite;
+  }
+  .ripple:nth-child(1) { width: 400px; height: 400px; bottom: -200px; left: 50%; transform: translateX(-50%); animation-delay: 0s; }
+  .ripple:nth-child(2) { width: 700px; height: 700px; bottom: -350px; left: 50%; transform: translateX(-50%); animation-delay: 2s; }
+  .ripple:nth-child(3) { width: 1000px; height: 1000px; bottom: -500px; left: 50%; transform: translateX(-50%); animation-delay: 4s; }
+
+  @keyframes ripple {
+    0% { opacity: 0.6; }
+    100% { opacity: 0; transform: translateX(-50%) scale(1.15); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    animation: fadeUp 1.4s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(32px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .eyebrow {
+    font-family: 'Jost', sans-serif;
+    font-weight: 200;
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(4rem, 12vw, 9rem);
+    line-height: 0.9;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.2em;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--pale);
+    font-weight: 300;
+  }
+
+  .hero-dot {
+    display: inline-block;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: rgba(255,255,255,0.55);
+    margin: 1.5rem auto 3rem;
+    max-width: 480px;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .hero-cta:hover {
+    background: var(--gold);
+    color: var(--ink);
+  }
+
+  .hero-cta svg { width: 14px; height: 14px; }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.4;
+    animation: fadeUp 1.4s 0.5s ease both;
+  }
+
+  .scroll-hint span {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%, 100% { transform: scaleY(1); opacity: 0.4; }
+    50% { transform: scaleY(0.6); opacity: 0.8; }
+  }
+
+  /* STATS BAR */
+  .stats {
+    background: var(--ink);
+    padding: 2.5rem 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--gold);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+  }
+
+  /* ABOUT */
+  .section {
+    padding: 7rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  .section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 2rem;
+  }
+
+  .section h2 em {
+    font-style: italic;
+    color: var(--sage);
+  }
+
+  .section p {
+    font-size: 1rem;
+    line-height: 1.9;
+    color: #4a4a42;
+    max-width: 600px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--gold);
+    margin: 2rem 0;
+  }
+
+  /* USE CASES GRID */
+  .uses {
+    background: var(--mist);
+    padding: 7rem 2rem;
+  }
+
+  .uses-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .uses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px;
+    margin-top: 4rem;
+    background: rgba(74, 107, 82, 0.15);
+  }
+
+  .use-card {
+    background: var(--mist);
+    padding: 2.5rem 2rem;
+    transition: background 0.3s ease;
+  }
+
+  .use-card:hover { background: #dce9dd; }
+
+  .use-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 1.2rem;
+    color: var(--sage);
+  }
+
+  .use-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+  }
+
+  .use-card p {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    color: #5a6b5c;
+  }
+
+  /* PRICE */
+  .price-section {
+    background: var(--ink);
+    padding: 7rem 2rem;
+    text-align: center;
+  }
+
+  .price-section .section-label { color: var(--gold); }
+
+  .price-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+
+  .price-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(4rem, 10vw, 7rem);
+    font-weight: 300;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+    margin: 2rem 0;
+  }
+
+  .price-sub {
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 3rem;
+  }
+
+  .price-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--gold);
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1.1rem 3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .price-cta:hover { background: #c9a86a; }
+
+  .price-note {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.1em;
+  }
+
+  /* WHY */
+  .why {
+    padding: 7rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .why { grid-template-columns: 1fr; gap: 3rem; }
+    .stats { gap: 2rem; padding: 2rem; }
+  }
+
+  .why-list {
+    list-style: none;
+    margin-top: 2rem;
+  }
+
+  .why-list li {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(74, 107, 82, 0.15);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #4a4a42;
+  }
+
+  .why-list li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+    margin-top: 9px;
+  }
+
+  .domain-display {
+    background: var(--water);
+    padding: 3rem 2.5rem;
+    text-align: center;
+  }
+
+  .domain-display p {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 1rem;
+  }
+
+  .domain-display .big-domain {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.05em;
+  }
+
+  .domain-display .tld { color: var(--gold); }
+
+  .badge-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .badge {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.5);
+    padding: 6px 14px;
+  }
+
+  /* FOOTER */
+  footer {
+    background: #080e0b;
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.2);
+  }
+
+  footer a { color: var(--gold); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="ripple"></div>
+  <div class="ripple"></div>
+  <div class="ripple"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow">Premium Domain — Available Now</p>
+    <h1><em>Super</em>Lakes<span class="hero-dot">.</span>com</h1>
+    <p class="hero-sub">A rare, category-defining domain for the brand that will shape how the world experiences lakefront living.</p>
+    <a href="#acquire" class="hero-cta">
+      Inquire to Acquire
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 7h10M8 3l4 4-4 4"/></svg>
+    </a>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <span class="stat-num">.com</span>
+    <span class="stat-label">Premium TLD</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">10</span>
+    <span class="stat-label">Characters</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">$1,195</span>
+    <span class="stat-label">Asking Price</span>
+  </div>
+  <div class="stat">
+    <span class="stat-num">24hr</span>
+    <span class="stat-label">Transfer Time</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+  <span class="section-label">The Opportunity</span>
+  <h2>A name that belongs <em>at the water's edge</em></h2>
+  <div class="divider"></div>
+  <p>SuperLakes.com is short, instantly memorable, and evokes aspiration — the kind of domain that becomes a brand the moment it's spoken aloud. In a crowded landscape of forgettable URLs, this is the rare exception.</p>
+</div>
+
+<!-- USE CASES -->
+<div class="uses">
+  <div class="uses-inner">
+    <span class="section-label">Built For</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.1;color:var(--ink);">Visionary brands across <em style="font-style:italic;color:var(--sage);">four industries</em></h2>
+    <div class="uses-grid">
+      <div class="use-card">
+        <svg class="use-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 26l6-8 5 4 5-7 8 11H4z"/><circle cx="22" cy="8" r="4"/></svg>
+        <h3>Luxury Real Estate</h3>
+        <p>Lakefront property listings, vacation home sales, and premium waterfront developments.</p>
+      </div>
+      <div class="use-card">
+        <svg class="use-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M6 20c0-6 4-11 10-11s10 5 10 11"/><path d="M2 20h28M10 20v6M22 20v6"/></svg>
+        <h3>Travel & Hospitality</h3>
+        <p>Lake resort booking platforms, lakeside getaway guides, and curated outdoor travel experiences.</p>
+      </div>
+      <div class="use-card">
+        <svg class="use-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M16 4v4M8 8l3 3M24 8l-3 3M4 16h4M24 16h4M10 22l-3 3M22 22l3 3M16 24v4"/><circle cx="16" cy="16" r="6"/></svg>
+        <h3>Outdoor & Lifestyle</h3>
+        <p>Water sports equipment, outdoor apparel, lake recreation, and eco-lifestyle brands.</p>
+      </div>
+      <div class="use-card">
+        <svg class="use-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 16c4-8 10-8 12 0s8 8 12 0M4 22c4-8 10-8 12 0s8 8 12 0"/></svg>
+        <h3>Environmental Tech</h3>
+        <p>Water quality monitoring, lake conservation, sustainable aquatic technology platforms.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY -->
+<div class="why">
+  <div>
+    <span class="section-label">Why This Domain</span>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;color:var(--ink);">Everything a brand needs <em style="font-style:italic;color:var(--sage);">in a name</em></h2>
+    <div class="divider"></div>
+    <ul class="why-list">
+      <li>Short, memorable, and pronounceable in any language</li>
+      <li>Exact-match .com — the gold standard of domain extensions</li>
+      <li>No hyphens, no numbers, no ambiguity</li>
+      <li>Broad enough for a portfolio brand, specific enough to mean something</li>
+      <li>Instant credibility — signals an established, serious operation</li>
+      <li>Secure transfer via Afternic / Escrow.com — buyer protected</li>
+    </ul>
+  </div>
+  <div class="domain-display">
+    <p>Your new domain</p>
+    <div class="big-domain">SuperLakes<span class="tld">.com</span></div>
+    <div class="badge-row">
+      <span class="badge">Verified</span>
+      <span class="badge">Premium</span>
+      <span class="badge">Fast Transfer</span>
+    </div>
+  </div>
+</div>
+
+<!-- PRICE / CTA -->
+<div class="price-section" id="acquire">
+  <span class="section-label">Acquisition</span>
+  <h2>Own it today</h2>
+  <span class="price-tag">$1,195</span>
+  <p class="price-sub">Buy now price &nbsp;·&nbsp; Offers considered from $400</p>
+  <a href="https://www.afternic.com/forsale/superlakes.com" class="price-cta" target="_blank">
+    Purchase via Afternic
+  </a>
+  <p class="price-note">Secure transaction · Fast transfer · Buyer protected</p>
+</div>
+
+<footer>
+  <p>SuperLakes.com &nbsp;·&nbsp; Inquiries: <a href="mailto:your@email.com">your@email.com</a> &nbsp;·&nbsp; Listed on <a href="https://www.afternic.com/forsale/superlakes.com" target="_blank">Afternic</a></p>
+</footer>
+
+</body>
+</html>
